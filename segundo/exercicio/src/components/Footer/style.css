@@ -1,0 +1,12 @@
+/*exercicio\src\components\Footer\style.css*/
+
+.footer-admin{
+  background-color: #fa2323cb;
+  padding: 0px;
+  text-align: center;
+  font-size: 14px;
+  color: rgb(247, 247, 247);
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+}

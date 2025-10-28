@@ -1,0 +1,12 @@
+/*exercicio\src\components\Header\style.css*/
+
+.header-admin{
+  background-color: #fa2323cb;
+  padding: 1rem;
+  text-align: center;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
