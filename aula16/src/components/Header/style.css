@@ -1,0 +1,12 @@
+/*src\components\Header\style.css*/
+
+.header-container {
+  background-color: #fa2323cb;
+  padding: 0px;
+  text-align: center;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
