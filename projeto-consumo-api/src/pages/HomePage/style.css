@@ -1,0 +1,44 @@
+/* Estilo geral da página inicial */
+.home-container {
+    width: 100%;
+    height: 100vh;                /* Altura da tela inteira */
+    background-color: #f4f4f4;    /* Fundo claro */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;      /* Alinha o conteúdo verticalmente */
+    align-items: center;          /* Alinha o conteúdo horizontalmente */
+    text-align: center;
+    padding: 20px;
+}
+
+/* Título da página */
+.home-container h1 {
+    font-size: 36px;
+    color: #333333;               /* Cor do título */
+    font-weight: 700;
+    margin-bottom: 15px;          /* Espaço abaixo do título */
+}
+
+/* Texto do parágrafo */
+.home-container p {
+    font-size: 18px;
+    color: #666666;               /* Cor do texto */
+    max-width: 600px;             /* Limita a largura do parágrafo */
+    line-height: 1.6;
+}
+
+/* Adicionando sombra leve no texto para dar profundidade */
+.home-container h1, .home-container p {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .home-container h1 {
+        font-size: 28px; /* Tamanho do título reduzido em telas pequenas */
+    }
+
+    .home-container p {
+        font-size: 16px; /* Tamanho do parágrafo reduzido em telas pequenas */
+    }
+}

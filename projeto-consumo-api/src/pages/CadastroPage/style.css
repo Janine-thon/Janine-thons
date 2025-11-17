@@ -1,0 +1,107 @@
+/* Container geral da página de cadastro */
+.cadastro-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 40px;
+}
+
+/* Card do formulário */
+.cadastro-container form {
+    background: #fff;
+    padding: 25px 30px;
+    width: 100%;
+    max-width: 450px;
+
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+.cadastro-container h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+    color: #333;
+}
+
+/* Estilo geral dos grupos de campo */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+/* Label */
+.form-group label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 6px;
+}
+
+/* Inputs */
+.form-group input {
+    padding: 10px 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #0077ff;
+}
+
+/* Mensagens de erro */
+.error {
+    display: block;
+    margin-top: -12px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #e63946;
+}
+
+/* Botão de envio */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #0077ff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease;
+}
+
+/* Hover do botão */
+button[type="submit"]:hover:not(:disabled) {
+    background-color: #005fd1;
+}
+
+/* Botão desabilitado */
+button[disabled] {
+    background-color: #8fbaf5;
+    cursor: not-allowed;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .cadastro-container form {
+        padding: 20px;
+    }
+
+    .cadastro-container h1 {
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,71 @@
+/* Estilo geral da página de listar usuários */
+.listar-usuarios-container {
+    width: 100%;
+    padding: 20px;
+    background-color: #f4f4f4;     /* Cor de fundo suave */
+    min-height: 100vh;               /* Garante que a página ocupe a altura total da tela */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Título da página */
+.listar-usuarios-container h1 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Estilo da lista */
+.listar-usuarios-container ul {
+    list-style: none;               /* Remove os marcadores padrão */
+    padding: 0;
+    width: 100%;
+    max-width: 600px;                /* Limita a largura da lista */
+}
+
+.listar-usuarios-container li {
+    background-color: #ffffff;      /* Cor de fundo dos itens */
+    padding: 15px;
+    margin-bottom: 10px;             /* Espaçamento entre os itens */
+    border-radius: 5px;              /* Bordas arredondadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.listar-usuarios-container li:hover {
+    transform: translateY(-5px);     /* Efeito de elevação ao passar o mouse */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo do parágrafo (quando não há usuários) */
+.listar-usuarios-container p {
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+}
+
+/* Estilo para o estado de carregamento */
+.listar-usuarios-container div {
+    font-size: 18px;
+    color: #888;
+    text-align: center;
+    margin-top: 50px;
+    font-weight: 600;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .listar-usuarios-container h1 {
+        font-size: 28px;
+    }
+
+    .listar-usuarios-container ul {
+        padding: 0 10px;     /* Pequeno espaçamento nas laterais */
+    }
+
+    .listar-usuarios-container li {
+        font-size: 16px;     /* Tamanho de texto reduzido */
+    }
+}

@@ -1,0 +1,62 @@
+/* Estilo geral do header */
+.header {
+    width: 100%;
+    background-color: #1a1a1a;   /* fundo */
+    padding: 15px 0;
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Container centralizado */
+.header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+.header .container a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Navegação */
+.header nav {
+    display: flex;
+    gap: 20px; /* espaçamento entre os links */
+}
+
+/* Links de navegação */
+.header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+/* Efeito hover */
+.header nav a:hover {
+    background-color: #ffffff22;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 600px) {
+    .header .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header nav {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+}
