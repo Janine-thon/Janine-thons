@@ -1,0 +1,135 @@
+/* style.css */
+
+/* Reset básico para consistência */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página com fundo dinâmico */
+body {
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Container principal: centralizado, com flexbox e animação de entrada */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+/* Animação de entrada para o container */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Título: grande, com gradiente de texto e sombra */
+.home-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    animation: gradientShift 3s ease-in-out infinite;
+    line-height: 1.2;
+}
+
+/* Animação de gradiente pulsante no título */
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* Subtítulo: elegante, com opacidade e hover effect */
+.home-subtitle {
+    font-size: 1.4rem;
+    color: #e0e0e0;
+    text-align: center;
+    max-width: 700px;
+    line-height: 1.6;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.home-subtitle:hover {
+    opacity: 1;
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Elementos decorativos: estrelas flutuantes para um toque mágico */
+.home-container::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #fff 0%, transparent 70%);
+    border-radius: 50%;
+    animation: float 4s ease-in-out infinite;
+}
+
+.home-container::after {
+    content: '';
+    position: absolute;
+    bottom: 15%;
+    right: 15%;
+    width: 15px;
+    height: 15px;
+    background: radial-gradient(circle, #4ecdc4 0%, transparent 70%);
+    border-radius: 50%;
+    animation: float 5s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Responsividade: ajustes para tablets e mobiles */
+@media (max-width: 768px) {
+    .home-title {
+        font-size: 2.5rem;
+    }
+    .home-subtitle {
+        font-size: 1.1rem;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-title {
+        font-size: 2rem;
+    }
+    .home-subtitle {
+        font-size: 1rem;
+        padding: 8px;
+    }
+}
